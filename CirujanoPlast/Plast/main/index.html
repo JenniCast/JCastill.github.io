@@ -58,17 +58,28 @@
 .navbar{transition:background .3s,box-shadow .3s}.navbar-brand .logo{height:50px;transition:transform .3s ease,filter .3s ease}.navbar-brand:hover .logo{transform:scale(1.08);filter:drop-shadow(0 2px 6px rgba(50,182,204,.5))}.nav-link{position:relative;font-weight:500;color:#00577a!important;transition:color .3s,transform .3s}.nav-link::after{content:"";position:absolute;width:0;height:2px;left:50%;bottom:0;background:#32b6cc;transition:all .3s;transform:translateX(-50%)}.nav-link:hover{color:#0d8faf!important;transform:translateY(-2px)}.nav-link:hover::after{width:60%}.btn-primary{background:#0d8faf;border:none;border-radius:30px;transition:all .3s}.btn-primary:hover{background:#127496;transform:translateY(-2px);box-shadow:0 4px 10px rgba(13,143,175,.4)}@media(max-width:992px){.nav-link::after{display:none}}
 </style>
 
-  <div id="home" class="page-hero bg-image overlay-dark" style="background-image: url(assets/img/bg_image_1.jpg);">
-    <div class="hero-section">
-      <div class="container text-center wow zoomIn">
-        <span class="subhead">Remodelando</span>
-        <h1 class="display-4">Tu belleza</h1>
-        <a href="#info" class="btn btn-primary">Acerca de mí</a>
-      </div>
-    </div>
+  <div id="home" class="page-hero bg-image overlay-dark" style="position: relative; overflow: hidden;">
+  <div style="
+    content: ''; 
+    position: absolute; 
+    inset: 0; 
+    background-image: url(assets/Fotografia.png); 
+    background-size: cover; 
+    background-position: center; 
+    filter: blur(3px); 
+    transform: scale(1.1); 
+    z-index: 0;">
   </div>
 
-</div> <!-- .page-section -->
+  <div class="hero-section" style="position: relative; z-index: 1;">
+    <div class="container text-center wow zoomIn">
+      <span class="subhead">Remodelando</span>
+      <h1 class="display-4">Tu belleza</h1>
+      <a href="#info" class="btn btn-primary">Acerca de mí</a>
+    </div>
+  </div>
+</div>
+ <!-- .page-section -->
 
 <section id="info">
   <div class="page-section pb-0">
@@ -80,9 +91,9 @@
           <h1><strong>Dra. Jennifer Castillo</strong><br>Cirugía Plástica</h1>
           <p class="text-grey mb-4">
             Cirujano Plástico, Especialista en Cirugía Plástica Estética
-(Training en Monterrey 🇲🇽).
+(Training en Monterrey).
 Comprometida para ayudarte a descubrir y potenciar tu mejor versión. Mi práctica se enfoca en procedimientos estéticos como rinoplastia, blefaroplastia, bichectomía y ginecomastia, ofreciendo resultados naturales y personalizados para cada paciente.
-Creo firmemente que la belleza va de la mano con la confianza y el bienestar, por eso, mi misión es acompañarte en un proceso seguro y profesional, donde juntos podamos remodelar tu belleza y resaltar lo mejor de ti.
+La belleza va de la mano con la confianza y el bienestar, por eso, mi misión es acompañarte en un proceso seguro y profesional, donde juntos podamos remodelar tu belleza y resaltar lo mejor de ti.
           </p>
 
           <!-- Botón -->
@@ -351,7 +362,7 @@ Creo firmemente que la belleza va de la mano con la confianza y el bienestar, po
     <p class="text-center text-muted mb-5 wow fadeInUp">Cálidad moderna, con precisión y cuidado en cada detalle.</p>
 
     <div class="row align-items-center mb-5 wow fadeInUp">
-      <div class="col-md-6 mb-3 mb-md-0"><img src="assets/img/centro.png" alt="Instalaciones" class="about-img rounded-3 shadow"></div>
+      <div class="col-md-6 mb-3 mb-md-0"><img src="assets/img/avant.png" alt="Instalaciones" class="about-img rounded-3 shadow"></div>
       <div class="col-md-6">
         <h3 class="fw-bold mb-3">Instalaciones Modernas</h3>
         <p>Contamos con quirófanos totalmente equipados, áreas de recuperación confortables y espacios diseñados para brindar una experiencia segura y agradable.</p>
