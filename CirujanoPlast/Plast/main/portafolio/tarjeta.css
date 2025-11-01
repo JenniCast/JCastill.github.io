@@ -1,0 +1,261 @@
+/* 🎨 Paleta de colores institucional */
+:root {
+  --primary: #00577a;
+  --accent: #0d8faf;
+  --secondary: #32b6cc;
+  --warning: #127496;
+  --info: #01445a;
+  --danger: #0d8faf;
+  --success: #32b6cc;
+  --dark: #01445a;
+  --light: #f5f9f6;
+  --cs: #127496;
+  --grey: #6E807A;
+}
+
+/* ⚙️ Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--light);
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🩺 Tarjeta principal */
+.tarjeta {
+  display: flex;
+  align-items: stretch;
+  background-color: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  max-width: 880px;
+  width: 95%;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* 📸 Lado izquierdo (foto) */
+.tarjeta-img {
+  flex: 1.1;
+  position: relative;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Foto limpia, sin oscurecer */
+.tarjeta-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  opacity: 1;
+  mix-blend-mode: normal;
+}
+
+/* 🧾 Lado derecho (información) */
+.tarjeta-info {
+  flex: 1.4;
+  padding: 2.5rem 2rem;
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Nombre y títulos */
+.nombre {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+}
+
+.especialidad {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.formacion {
+  color: var(--grey);
+  font-size: 0.9rem;
+  margin-bottom: 1.1rem;
+}
+
+/* Línea separadora */
+.linea {
+  width: 55px;
+  height: 3px;
+  background-color: var(--accent);
+  border-radius: 3px;
+  margin-bottom: 1.2rem;
+}
+
+/* Datos de contacto */
+.datos {
+  width: 100%;
+}
+
+.datos p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0.4rem 0;
+  color: var(--info);
+}
+
+.datos i {
+  color: var(--accent);
+  margin-right: 0.4rem;
+}
+
+.datos a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.datos a:hover {
+  text-decoration: underline;
+}
+
+/* 📍 Botones de acción */
+.acciones {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.acciones .btn {
+  border-radius: 30px;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  border: none;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--warning);
+  box-shadow: 0 4px 10px rgba(0, 91, 107, 0.25);
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+/* 🌐 Redes sociales */
+.social {
+  margin-top: 1.3rem;
+}
+
+.social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.social a:hover {
+  transform: scale(1.1);
+}
+
+.fb { background-color: #1877f2; }
+.ig { background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf, #4f5bd5); }
+.wa { background-color: #25d366; }
+
+/* 📱 Responsivo */
+@media (max-width: 992px) {
+  .tarjeta-info {
+    padding: 2rem;
+  }
+
+  .nombre {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+    padding: 3rem 0;
+  }
+
+  .tarjeta {
+    flex-direction: column;
+    max-width: 420px;
+    align-items: center;
+  }
+
+  .tarjeta-img {
+    width: 100%;
+    height: 260px;
+    align-items: center;
+  }
+
+  .tarjeta-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    opacity: 1;
+  }
+
+  .tarjeta-info {
+    text-align: center;
+    align-items: center;
+    padding: 1.8rem 1.3rem;
+  }
+
+  .linea {
+    margin: 1rem auto;
+  }
+
+  .acciones {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .acciones .btn {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .social {
+    justify-content: center;
+  }
+}
